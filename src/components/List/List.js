@@ -4,15 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { CSSTransition, TransitionGroup} from 'react-transition-group';
 
 import {sportsmenFetching, sportsmenFetched,sportsmenFetchingError, sportsmenDeleted} from '../../actions';
-import HeroesListItem from "../heroesListItem/HeroesListItem";
+import HeroesListItem from "../ListItem/ListItem";
 import Spinner from '../spinner/Spinner';
 
 import './heroesList.scss';
 
-// Задача для этого компонента:
-// При клике на "крестик" идет удаление персонажа из общего состояния
-// Усложненная задача:
-// Удаление идет и с json файла при помощи метода DELETE
+
 
 const HeroesList = () => {
     const {filteredHeroes, heroesLoadingStatus} = useSelector(state => state);
@@ -21,23 +18,21 @@ const HeroesList = () => {
 
     useEffect(() => {
         dispatch(sportsmenFetching());
-        request("http://localhost:3001/heroes")
+        request("http://localhost:3001/sportsmen")
             .then(data => dispatch(sportsmenFetched(data)))
             .catch(() => dispatch(sportsmenFetchingError()))
 
-        // eslint-disable-next-line
+        
     }, []);
 
-    // Функция берет id и по нему удаляет ненужного персонажа из store
-    // ТОЛЬКО если запрос на удаление прошел успешно
-    // Отслеживайте цепочку действий actions => reducers
+    
     const onDelete = useCallback((id) => {
-        // Удаление персонажа по его id
-        request(`http://localhost:3001/heroes/${id}`, "DELETE")
+        
+        request(`http://localhost:3001/sportsmen/${id}`, "DELETE")
             .then(data => console.log(data, 'Deleted'))
             .then(dispatch(sportsmenDeleted(id)))
             .catch(err => console.log(err));
-        // eslint-disable-next-line  
+         
     }, [request]);
 
     if (heroesLoadingStatus === "loading") {
@@ -52,7 +47,7 @@ const HeroesList = () => {
                 <CSSTransition
                     timeout={0}
                     classNames="hero">
-                    <h5 className="text-center mt-5">Героев пока нет</h5>
+                    <h5 className="text-center mt-5">Список пуст</h5>
                 </CSSTransition>
             )
         }

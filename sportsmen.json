@@ -1,5 +1,18 @@
 {
-  "sportsmen": [],
+  "sportsmen": [
+    {
+      "id": "edcd69a4-c6af-4c17-acd6-14a56e933a59",
+      "name": "Александр",
+      "description": "90890",
+      "element": "red"
+    },
+    {
+      "id": "b1345853-7fd4-43a1-8f44-0f5e81e77c93",
+      "name": "Александр Мельников",
+      "description": "98p",
+      "element": "red"
+    }
+  ],
   "filters": [
     {
       "name": "all",
@@ -7,23 +20,24 @@
       "className": "btn-outline-dark"
     },
     {
-      "name": "fire",
-      "label": "Огонь",
+      "name": "red",
+      "label": "силовые виды спорта",
       "className": "btn-danger"
+    
     },
     {
-      "name": "water",
-      "label": "Вода",
+      "name": "blue",
+      "label": "водные виды спорта",
       "className": "btn-primary"
     },
     {
-      "name": "wind",
-      "label": "Ветер",
+      "name": "green",
+      "label": "циклические виды спорта",
       "className": "btn-success"
     },
     {
-      "name": "earth",
-      "label": "Земля",
+      "name": "gray",
+      "label": "игровые виды спорта",
       "className": "btn-secondary"
     }
   ]

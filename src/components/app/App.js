@@ -1,6 +1,6 @@
-import HeroesList from '../heroesList/HeroesList';
-import HeroesAddForm from '../heroesAddForm/HeroesAddForm';
-import HeroesFilters from '../heroesFilters/HeroesFilters';
+import List from '../List/List';
+import AddForm from '../AddForm/AddForm';
+import Filters from '../Filters/Filters';
 
 import './app.scss';
 
@@ -9,10 +9,10 @@ const App = () => {
     return (
         <main className="app">
             <div className="content">
-                <HeroesList/>
+                <List/>
                 <div className="content__interactive">
-                    <HeroesAddForm/>
-                    <HeroesFilters/>
+                    <AddForm/>
+                    <Filters/>
                 </div>
             </div>
         </main>
