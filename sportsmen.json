@@ -1,18 +1,5 @@
 {
-  "sportsmen": [
-    {
-      "id": "edcd69a4-c6af-4c17-acd6-14a56e933a59",
-      "name": "Александр",
-      "description": "90890",
-      "element": "red"
-    },
-    {
-      "id": "b1345853-7fd4-43a1-8f44-0f5e81e77c93",
-      "name": "Александр Мельников",
-      "description": "98p",
-      "element": "red"
-    }
-  ],
+  "sportsmen": [],
   "filters": [
     {
       "name": "all",
@@ -22,8 +9,8 @@
     {
       "name": "red",
       "label": "силовые виды спорта",
-      "className": "btn-danger"
-    
+      "className": "btn-danger",
+      "photo": "cicl.jpg"
     },
     {
       "name": "blue",

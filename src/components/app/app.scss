@@ -1,7 +1,7 @@
 .app {
     height: 100vh;
     overflow-y: scroll;
-    background: url('../../assets/hero_bg.jpg') center / cover no-repeat;
+    background: url('../../assets/sport.jpg') center / cover no-repeat;
 }
 
 .content {
@@ -14,3 +14,8 @@
         padding-left: 40px;
     }
 }
+
+.rounded {
+    border-radius: 0.25rem !important;
+    background: azure;
+}    
